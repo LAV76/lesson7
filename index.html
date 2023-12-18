@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPA Example</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showPage('home')">Главная</a>
+        <a href="#" onclick="showPage('about')">О нас</a>
+    </nav>
+    <section id="home">
+        <h2>Добро пожаловать на главную страницу!</h2>
+        <p>Здесь вы можете найти основную информацию о нашем SPA приложении.</p>
+    </section>
+    <section id="about" style="display: none;">
+        <h2>О нас</h2>
+        <p>Мы команда разработчиков, создавшая это простое SPA приложение.</p>
+    </section>
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
